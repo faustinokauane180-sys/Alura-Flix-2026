@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kauane Faustino - Speed Station</title>
+    <style>
+        /* Importando uma fonte cursiva elegante similar à Photograph Script via Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Permanent+Marker&display=swap');
 
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            /* Fundo com textura de fibra de carbono/pista de corrida */
+            background-image: linear-gradient(45deg, #111 25%, transparent 25%), 
+                              linear-gradient(-45deg, #111 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #111 75%), 
+                              linear-gradient(-45deg, transparent 75%, #111 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container estilo Relâmpago McQueen */
+        header {
+            background: linear-gradient(135deg, #ef1c24 60%, #f9a01b 100%); /* Vermelho McQueen e Amarelo do Raio */
+            padding: 40px 60px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 30px #ef1c24;
+            border: 5px solid #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Detalhe da clássica linha de chegada (Xadrez) */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 15px;
+            background-image: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), 
+                              linear-gradient(45deg, #000 25%, #fff 25%, #fff 75%, #000 75%, #000);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        /* O seu nome com a fonte customizada (Photograph Script/Estilo Cursiva) */
+        h1 {
+            font-family: 'Mrs Saint Delafield', cursive;
+            font-size: 5rem;
+            margin: 10px 0 0 0;
+            color: #ffffff;
+            text-shadow: 3px 3px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+            letter-spacing: 2px;
+        }
+
+        /* Subtítulo no estilo do logo do filme Cars */
+        .subtitulo {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.8rem;
+            color: #f9a01b;
+            text-transform: uppercase;
+            font-style: italic;
+            margin-top: -10px;
+            text-shadow: 2px 2px 0px #ef1c24, 4px 4px 0px #000;
+        }
+
+        /* O famoso "Kachow!" */
+        .catchphrase {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 15px;
+            border: 2px solid #f9a01b;
+            transform: rotate(-5deg);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kauane Faustino</h1>
+        <div class="subtitulo">Bem-vindo ao meu site</div>
+        <div class="catchphrase">Kachow! ⚡</div>
+    </header>
+
+</body>
+</html>
