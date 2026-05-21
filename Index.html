@@ -1,186 +1,96 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+/* Configurações Gerais */
+body {
+    background-color: #0b071e; /* Fundo roxo bem escuro, estilo cinema */
+    color: #ffffff; /* Texto branco para dar contraste */
+    font-family: "Chakra Petch", sans-serif;
+    margin: 0;
+    padding-bottom: 40px;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400;1,700&family=Mrs+Saint+Delafield&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <title>Kauane Faustino - Piston Cup Stream</title>
-    
-    <style>
-        /* Estilização Base com o Tema do McQueen */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #0d0d0d;
-            /* Fundo com textura quadriculada de pista bem sutil */
-            background-image: linear-gradient(45deg, #141414 25%, transparent 25%), 
-                              linear-gradient(-45deg, #141414 25%, transparent 25%), 
-                              linear-gradient(45deg, transparent 75%, #141414 75%), 
-                              linear-gradient(-45deg, transparent 75%, #141414 75%);
-            background-size: 32px 32px;
-            font-family: 'Chakra Petch', sans-serif;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
+/* Cabeçalho / Logo */
+header {
+    border-bottom: 2px solid #ff007f; /* Linha neon rosa */
+    padding: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff007f; /* Nome do site em rosa neon */
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.5); /* Efeito brilhante */
+    letter-spacing: 2px;
+}
 
-        /* Header com seu nome em Photograph Script */
-        header {
-            background: linear-gradient(180deg, #111 0%, transparent 100%);
-            padding: 20px 4%;
-            display: flex;
-            align-items: center;
-            border-bottom: 4px solid #ef1c24; /* Linha vermelha McQueen */
-            box-shadow: 0 4px 20px rgba(239, 28, 36, 0.3);
-        }
+/* Seção Principal (Chamada) */
+.chamada {
+    background: linear-gradient(180deg, #130b32 0%, #0b071e 100%); /* Degradê de fundo */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 40px;
+}
 
-        .logo-nome {
-            font-family: 'Mrs Saint Delafield', cursive;
-            font-size: 3.5rem;
-            color: #ffffff;
-            text-shadow: 2px 2px 0px #ef1c24, -1px -1px 0px #000;
-            text-decoration: none;
-            letter-spacing: 2px;
-        }
+.chamada-texto h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #00f0ff; /* Azul neon estilo Aranhaverso */
+    text-shadow: 2px 2px #ff007f; /* Sombra rosa para efeito 3D glitch */
+    margin-bottom: 10px;
+}
 
-        /* Seção Principal (Chamada) */
-        .chamada {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 4%;
-            background: linear-gradient(90deg, rgba(239, 28, 36, 0.2) 0%, transparent 100%);
-            border-bottom: 2px solid #333;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+.chamada-texto p {
+    font-size: 18px;
+    color: #ff007f;
+    font-weight: 500;
+}
 
-        .chamada-texto h1 {
-            font-family: 'Permanent Marker', cursive;
-            font-size: 3rem;
-            color: #f9a01b; /* Amarelo do Raio */
-            text-transform: uppercase;
-            font-style: italic;
-            margin: 0 0 10px 0;
-            text-shadow: 3px 3px 0px #ef1c24, 5px 5px 0px #000;
-        }
+/* Ajuste do vídeo do YouTube */
+iframe {
+    border: 3px solid #00f0ff; /* Borda azul neon no vídeo */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
 
-        .chamada-texto p {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #fff;
-            background-color: #ef1c24;
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 3px 3px 0px #000;
-        }
+/* Seção de Categorias */
+.categoria {
+    padding: 40px;
+}
 
-        iframe {
-            border: 4px solid #f9a01b;
-            box-shadow: 0 0 25px rgba(249, 160, 27, 0.4);
-            border-radius: 8px;
-            max-width: 100%;
-        }
+.categoria h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    border-left: 5px solid #ff007f; /* Barrinha rosa ao lado do título */
+    padding-left: 10px;
+}
 
-        /* Seção de Categorias e Vídeos do Carros */
-        .categoria {
-            padding: 40px 4%;
-        }
+/* Carrossel/Grade de Vídeos */
+.categoria-videos {
+    display: flex;
+    overflow-x: auto; /* Permite rolar para os lados se tiver muitos vídeos */
+    gap: 15px;
+    padding-bottom: 15px;
+}
 
-        .categoria h2 {
-            font-family: 'Permanent Marker', cursive;
-            font-size: 1.8rem;
-            color: #ffffff;
-            margin-bottom: 20px;
-            border-left: 5px solid #f9a01b;
-            padding-left: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+/* Efeito nas miniaturas dos vídeos */
+.categoria-videos img {
+    opacity: 0.7;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+}
 
-        .categoria-videos {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding-bottom: 15px;
-        }
+/* Efeito ao passar o mouse por cima (Hover) */
+.categoria-videos img:hover {
+    opacity: 1;
+    transform: scale(1.05); /* O vídeo aumenta levemente de tamanho */
+    border: 2px solid #00f0ff; /* Ganha borda iluminada */
+}
 
-        /* Customização da barra de rolagem dos vídeos */
-        .categoria-videos::-webkit-scrollbar {
-            height: 8px;
-        }
-        .categoria-videos::-webkit-scrollbar-thumb {
-            background: #ef1c24;
-            border-radius: 10px;
-        }
+/* Customização da barra de rolagem (Scrollbar) */
+.categoria-videos::-webkit-scrollbar {
+    height: 8px;
+}
 
-        .categoria-videos a {
-            flex-shrink: 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 6px;
-            overflow: hidden;
-            border: 2px solid #333;
-        }
-
-        .categoria-videos a:hover {
-            transform: scale(1.05);
-            border-color: #ef1c24;
-            box-shadow: 0 0 15px rgba(239, 28, 36, 0.6);
-        }
-
-        .categoria-videos img {
-            width: 280px;
-            display: block;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <a href="#" class="logo-nome">Kakauflix</a>
-    </header>
-
-    <section class="chamada">
-        <div class="chamada-texto">
-            <h1>CARROS 3 - CORRIDA FINAL</h1>
-            <p>#relampago-mcqueen ⚡</p>
-        </div>
-
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2LeOH9AGJQM"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <section class="categoria">
-        <h2>Mais do Universo Cars (Kachow!)</h2>
-        <div class="categoria-videos">
-            <a href="https://www.youtube.com/watch?v=E4K8g6T7I_o">
-                <img src="https://img.youtube.com/vi/E4K8g6T7I_o/maxresdefault.jpg" alt="McQueen Corrida" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=vVjZ8G_Y2rM">
-                <img src="https://img.youtube.com/vi/vVjZ8G_Y2rM/maxresdefault.jpg" alt="Momentos McQueen" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=SbXIj2T-_uk">
-                <img src="https://img.youtube.com/vi/SbXIj2T-_uk/maxresdefault.jpg" alt="Carros 1" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=bAtPOnvP6Y4">
-                <img src="https://img.youtube.com/vi/bAtPOnvP6Y4/maxresdefault.jpg" alt="Evolução" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=S0ZunGshC7E">
-                <img src="https://img.youtube.com/vi/S0ZunGshC7E/maxresdefault.jpg" alt="Radiator Springs" />
-            </a>
-        </div>
-    </section>
-
-</body>
-
-</html>
-
+.categoria-videos::-webkit-scrollbar-thumb {
+    background: #ff007f;
+    border-radius: 10px;
+}
