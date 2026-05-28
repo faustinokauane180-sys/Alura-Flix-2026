@@ -1,8 +1,6 @@
-
 body {
     color: white;
-background: #e4e4f7;
-background: linear-gradient(90deg,rgb(210, 130, 203) 0%, rgb(255, 251, 251) 50%, rgb(231, 127, 194) 100%);
+    background: black;
     margin: 0px;
     font-family: "Chakra Petch", sans-serif;
     margin-bottom: 100px;
@@ -60,3 +58,5 @@ p {
 .categoria h2 {
     color: rgb(42, 122, 228);
 }
+
+
